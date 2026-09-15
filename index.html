@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kareem Naser | Cybersecurity Portfolio</title>
+<meta name="description" content="بورتفوليو Kareem Naser، طالب Cybersecurity و Penetration Testing. مشاريع، أدوات، مسار تعلم، وشرح مبسّط لمجال الأمن السيبراني.">
+<meta name="keywords" content="Cybersecurity, Penetration Testing, Red Team, Blue Team, SOC, Network Security, Kareem Naser">
+<meta name="author" content="Kareem Naser">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kareem Naser | Cybersecurity Portfolio">
+<meta property="og:description" content="بورتفوليو Kareem Naser، طالب Cybersecurity و Penetration Testing. مشاريع، أدوات، ومسار تعلم عملي.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:locale" content="ar_AR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kareem Naser | Cybersecurity Portfolio">
+<meta name="twitter:description" content="طالب Cybersecurity / Penetration Testing — مشاريع، أدوات، ومسار تعلم.">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- خلفية الشبكة/الجزيئات المتحركة -->
+<canvas id="net-canvas" aria-hidden="true"></canvas>
+<div class="scanline-overlay" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- شريط التنقل -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-glyph">K_N</span>
+      <span class="brand-status" id="brand-status">
+        <span class="dot"></span> SYSTEM ONLINE
+      </span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" data-nav>الرئيسية</a>
+      <a href="#about" data-nav>عني</a>
+      <a href="#skills" data-nav>المهارات</a>
+      <a href="#projects" data-nav>المشاريع</a>
+      <a href="#certs" data-nav>الشهادات</a>
+      <a href="#explained" data-nav>الأمن السيبراني</a>
+      <a href="#contact" data-nav>تواصل</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="motion-toggle" class="motion-btn" type="button" aria-pressed="true" title="تفعيل/إيقاف الحركة">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        <span id="motion-label">الحركة: تشغيل</span>
+      </button>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="hero-eyebrow" aria-hidden="true">$ whoami</p>
+      <h1 class="hero-name">
+        <span class="glitch-wrap" data-text="Kareem Naser">Kareem Naser</span>
+      </h1>
+      <p class="hero-role">
+        <span class="typed-role" id="typed-role"></span><span class="cursor" aria-hidden="true">_</span>
+      </p>
+      <p class="hero-desc">
+        طالب في مجال <strong>Cybersecurity</strong> أُركّز على <strong>Penetration Testing</strong> و بناء أساس عملي قوي عبر مختبرات منزلية (Home Lab)
+        وتحديات CTF، بهدف فهم كيف تُخترق الأنظمة لأتمكّن من حمايتها بشكل أفضل.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <span>عرض الأعمال</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 17l5-5-5-5"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">تواصل معي</a>
+      </div>
+
+      <div class="hero-stats" role="list">
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-num">Home Lab</span>
+          <span class="hero-stat-label">بيئة تدريب شخصية</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-num">CTF</span>
+          <span class="hero-stat-label">تحديات وتمارين عملية</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-num">Learning</span>
+          <span class="hero-stat-label">مسار تعلّم مستمر</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="انتقل للأسفل">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">// About</p>
+        <h2>عني</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="panel about-text" data-reveal>
+          <p>
+            أنا <strong>Kareem Naser</strong>، مهتم بمجال الأمن السيبراني منذ بدأت أستكشف كيف تعمل الشبكات والأنظمة من الداخل.
+            أقضي وقتي في بناء وتجربة سيناريوهات هجوم/دفاع داخل بيئة معزولة (Home Lab)، وحل تحديات CTF على منصات تدريب، وتوثيق كل ما أتعلمه بشكل عملي.
+          </p>
+          <p>
+            هدفي الحالي هو التعمّق في <strong>Penetration Testing</strong> وفهم منهجيات الاختبار المعتمدة، مع بناء خلفية متينة في الشبكات وأنظمة التشغيل والبرمجة النصية،
+            كخطوة أولى نحو مسار احترافي في الأمن السيبراني.
+          </p>
+          <ul class="about-points">
+            <li>أتعلّم عبر الممارسة: Home Lab + CTF + كتابة تقارير فنية.</li>
+            <li>أوثّق تقدّمي بشفافية دون ادّعاء خبرات أو شهادات غير حقيقية.</li>
+            <li>مهتم بالجانبين الهجومي (Red Team) والدفاعي (Blue Team) لفهم الصورة الكاملة.</li>
+          </ul>
+        </div>
+
+        <aside class="panel about-facts" data-reveal>
+          <div class="facts-header">
+            <span class="dot dot-red"></span> profile.json
+          </div>
+          <dl class="facts-list">
+            <div><dt>Role</dt><dd>Cybersecurity / Pentest Student</dd></div>
+            <div><dt>Focus</dt><dd>Penetration Testing, Networking</dd></div>
+            <div><dt>Approach</dt><dd>Home Lab · CTF · Self-study</dd></div>
+            <div><dt>Status</dt><dd><span class="status-pill">Learning &amp; Building</span></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">// Skills</p>
+        <h2>المهارات والأدوات</h2>
+        <p class="section-sub">مستويات تقريبية تعكس مرحلة تعلّم مستمرة، وليست ادّعاء إتقان كامل.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="panel skill-card" data-reveal>
+          <div class="skill-card-head">
+            <span class="skill-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M2 20h20M8 20l1-4h6l1 4"/></svg>
+            </span>
+            <h3>الشبكات والأنظمة</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>TCP/IP</li><li>Linux</li><li>Kali Linux</li><li>Windows</li><li>Bash</li>
+          </ul>
+        </div>
+
+        <div class="panel skill-card" data-reveal>
+          <div class="skill-card-head">
+            <span class="skill-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            </span>
+            <h3>Recon &amp; Scanning</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Nmap</li><li>Wireshark</li><li>Netcat</li><li>Gobuster</li>
+          </ul>
+        </div>
+
+        <div class="panel skill-card" data-reveal>
+          <div class="skill-card-head">
+            <span class="skill-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>
+            </span>
+            <h3>Exploitation &amp; Testing</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Burp Suite</li><li>Metasploit</li><li>OWASP Top 10</li>
+          </ul>
+        </div>
+
+        <div class="panel skill-card" data-reveal>
+          <div class="skill-card-head">
+            <span class="skill-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+            </span>
+            <h3>Scripting</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Python</li><li>Bash</li><li>Git</li>
+          </ul>
+        </div>
+
+        <div class="panel skill-card" data-reveal>
+          <div class="skill-card-head">
+            <span class="skill-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+            </span>
+            <h3>بيئات التدريب</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>TryHackMe</li><li>Hack The Box</li><li>VirtualBox / VMware</li>
+          </ul>
+        </div>
+
+        <div class="panel skill-card" data-reveal>
+          <div class="skill-card-head">
+            <span class="skill-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M21 12c0 4.5-3 8-9 9-6-1-9-4.5-9-9V5l9-3 9 3v7z"/></svg>
+            </span>
+            <h3>الوعي الأمني</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>CIA Triad</li><li>Threat Modeling</li><li>Report Writing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">// Projects</p>
+        <h2>المشاريع</h2>
+        <p class="section-sub">
+          أمثلة Placeholder قابلة للتعديل بسهولة من ملف <code>js/main.js</code> — استبدلها بمشاريعك الحقيقية وروابطها.
+        </p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid" data-reveal>
+        <!-- تُبنى ديناميكيًا من js/main.js عبر مصفوفة PROJECTS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS / LEARNING JOURNEY -->
+  <section class="section section-alt" id="certs">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">// Journey</p>
+        <h2>الشهادات ومسار التعلّم</h2>
+        <p class="section-sub">
+          خط زمني قابل للتعديل من <code>js/main.js</code> (مصفوفة JOURNEY). أضف شهاداتك الحقيقية عند الحصول عليها فقط.
+        </p>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- تُبنى ديناميكيًا -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CYBERSECURITY EXPLAINED -->
+  <section class="section" id="explained">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">// Explained</p>
+        <h2>ما هو الأمن السيبراني؟</h2>
+      </div>
+
+      <div class="explained-grid">
+        <div class="panel explained-text" data-reveal>
+          <p>
+            <strong>Cybersecurity</strong> هو ممارسة حماية الأنظمة والشبكات والبيانات من الوصول غير المصرّح به،
+            والتلف، أو السرقة. يقوم المجال على ثلاثة مبادئ أساسية تُعرف بـ <strong>CIA Triad</strong>:
+          </p>
+          <div class="cia-grid">
+            <div class="cia-item">
+              <span class="cia-letter">C</span>
+              <div><h4>Confidentiality</h4><p>ضمان وصول المعلومات للأشخاص المصرّح لهم فقط.</p></div>
+            </div>
+            <div class="cia-item">
+              <span class="cia-letter">I</span>
+              <div><h4>Integrity</h4><p>ضمان دقة البيانات وعدم التلاعب بها دون إذن.</p></div>
+            </div>
+            <div class="cia-item">
+              <span class="cia-letter">A</span>
+              <div><h4>Availability</h4><p>ضمان توفّر الأنظمة والخدمات عند الحاجة إليها.</p></div>
+            </div>
+          </div>
+          <p>
+            يتفرّع الأمن السيبراني إلى تخصصات متعددة، يعمل كل منها من زاوية مختلفة لحماية المنظمات:
+            من رصد التهديدات وتحليلها، إلى محاكاة الهجمات لاكتشاف الثغرات، إلى تأمين التطبيقات والبنية السحابية،
+            وصولًا إلى الجوانب القانونية والتنظيمية للمخاطر. الخريطة التالية توضّح هذه التخصصات وعلاقتها ببعضها.
+          </p>
+        </div>
+      </div>
+
+      <!-- MIND MAP -->
+      <div class="mindmap-wrap panel" data-reveal>
+        <div class="mindmap-header">
+          <span class="dot dot-blue"></span> map.svg — التخصصات الرئيسية
+          <span class="mindmap-hint">اضغط على أي فرع لعرض التفاصيل</span>
+        </div>
+        <div class="mindmap-stage" id="mindmap-stage">
+          <svg id="mindmap-svg" viewBox="0 0 900 620" preserveAspectRatio="xMidYMid meet" role="img" aria-label="مخطط ذهني لتخصصات الأمن السيبراني"></svg>
+        </div>
+        <div class="mindmap-detail" id="mindmap-detail">
+          <p class="mindmap-placeholder">اختر أحد التخصصات من المخطط أعلاه لعرض شرح مختصر عنه هنا.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">// Contact</p>
+        <h2>تواصل معي</h2>
+        <p class="section-sub">مفتوح للتعاون، فرص التدريب، أو مجرد نقاش تقني حول الأمن السيبراني.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="panel contact-form" id="contact-form" data-reveal>
+          <div class="form-row">
+            <label for="cf-name">الاسم</label>
+            <input type="text" id="cf-name" name="name" placeholder="اسمك الكامل" required>
+          </div>
+          <div class="form-row">
+            <label for="cf-email">البريد الإلكتروني</label>
+            <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="cf-msg">الرسالة</label>
+            <textarea id="cf-msg" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>إرسال الرسالة</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="panel contact-links" data-reveal>
+          <div class="facts-header"><span class="dot dot-red"></span> connect.sh</div>
+          <a class="contact-link" href="mailto:kareem.naser@example.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+            <span>kareem.naser@example.com</span>
+          </a>
+          <a class="contact-link" href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.46-1.2-1.11-1.53-1.11-1.53-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            <span>github.com/your-username</span>
+          </a>
+          <a class="contact-link" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zM8.5 8h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4V8z"/></svg>
+            <span>linkedin.com/in/your-profile</span>
+          </a>
+          <p class="contact-footnote">
+            * هذا النموذج demo فقط — يمكنك ربطه بخدمة مثل Formspree أو EmailJS لاحقًا (موضّح في README).
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-glyph">K_N</span>
+      <p>Kareem Naser — Cybersecurity / Penetration Testing Student</p>
+    </div>
+    <nav class="footer-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#projects">المشاريع</a>
+      <a href="#explained">الأمن السيبراني</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <p class="footer-copy">© <span id="year"></span> Kareem Naser. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
